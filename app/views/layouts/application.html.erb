@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <title>Instrument's Market</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
+
+    <style>
+    <%= ".msg-#{current_user&.id}" %> {
+      background-color: #007bff !important;
+      padding: 10px;
+      }
+      <%= ".cont-#{current_user&.id}" %> {
+      display: flex;
+        justify-content: flex-end
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
